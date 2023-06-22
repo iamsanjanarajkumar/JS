@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-Basics</title>
+  </head>
+  <body>
+    <center>
+      <h1>JS-VARIABLES</h1>
+    </center>
+    <hr />
+    <pre>
+        DATATYPE
+        1.Primitive data type
+        2.Non-primitive data type
+      1.PRIMITIVE DATA type
+     -Int(integer) ->It accepts only round numbers ex= 0-9
+     -Float(float) ->It accepts decimal values ex= 10.6
+     -Boolean(boolean) ->It accepts either true or false 
+     -char(char) ->It accepts single character ex= apple
+     -void -> returns null values
+     
+     2.NON-PRIMITIVE/DERIVED  DATA type
+     - Array
+     -Structure
+     -Union
+     -Enum
+     -Pointer
+     -Function
+
+    </pre>
+    <hr />
+    <script>
+      //var ,let & const are the keywords used for declaration of variable
+
+      var firstNumber;
+      document.write(firstNumber, "<br>");
+      document.write("<b>Without value :</b>", firstNumber, "<br><hr>");
+
+      firstNumber = "hello js";
+      document.write("<b>With value :</b>", firstNumber, "<br>");
+      document.write("<b>With value :</b>" + firstNumber + "</br>");
+      document.write("<b>With value :", firstNumber, "</b><br>");
+      document.write("<b>With value :" + firstNumber + "</b><br>");
+      document.write(`<b>With value : ${firstNumber}</b><br>`);
+      document.write(typeof firstNumber, "<br><hr>");
+
+      firstNumber = "A";
+      document.write("<b>With value :</b>", firstNumber, "<br>");
+      document.write("<b>With value :</b>" + firstNumber + "</br>");
+      document.write("<b>With value :", firstNumber, "</b><br>");
+      document.write("<b>With value :" + firstNumber + "</b><br>");
+      document.write(`<b>With value : ${firstNumber}</b><br>`);
+      document.write(typeof firstNumber, "<br><hr>");
+
+      firstNumber = 1000;
+      document.write("<b>With value :</b>", firstNumber, "<br>");
+      document.write("<b>With value :</b>" + firstNumber + "</br>");
+      document.write("<b>With value :", firstNumber, "</b><br>");
+      document.write("<b>With value :" + firstNumber + "</b><br>");
+      document.write(`<b>With value : ${firstNumber}</b><br>`);
+      document.write(typeof firstNumber, "<br><hr>");
+
+      firstNumber = 1000.89;
+      document.write("<b>With value :</b>", firstNumber, "<br>");
+      document.write("<b>With value :</b>" + firstNumber + "</br>");
+      document.write("<b>With value :", firstNumber, "</b><br>");
+      document.write("<b>With value :" + firstNumber + "</b><br>");
+      document.write(`<b>With value : ${firstNumber}</b><br>`);
+      document.write(typeof firstNumber, "<br><hr>");
+
+      firstVariable = true;
+      document.write("<b>With value :</b>", firstVariable, "<br>");
+      document.write("<b>With value :</b>" + firstVariable + "</br>");
+      document.write("<b>With value :", firstVariable, "</b><br>");
+      document.write("<b>With value :" + firstVariable + "</b><br>");
+      document.write(`<b>With value : ${firstVariable}</b><br>`);
+      document.write(typeof firstVariable, "<br><hr>");
+
+      firstVariable = false;
+      document.write("<b>With value :</b>", firstVariable, "<br>");
+      document.write("<b>With value :</b>" + firstVariable + "</br>");
+      document.write("<b>With value :", firstVariable, "</b><br>");
+      document.write("<b>With value :" + firstVariable + "</b><br>");
+      document.write(`<b>With value : ${firstVariable}</b><br>`);
+      document.write(typeof firstVariable, "<br><hr>");
+    </script>
+  </body>
+</html>

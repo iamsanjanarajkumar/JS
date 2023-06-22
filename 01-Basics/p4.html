@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-Basics</title>
+  </head>
+  <body>
+    <script>
+      //1. Literal array=single
+      //1.1 Literal
+      var users = ["first", "second", "third"];
+      var z = [12, 1, 3, 9, 9, 7];
+      console.log("users=", users);
+
+      //1.2 array using constructor
+      var emp = new Array();
+      emp[0] = "Raj";
+      emp[1] = "john";
+      emp[2] = "mary";
+      console.log("emp=", emp);
+
+      //1.3 array using constructor parameter
+      var colors = new Array("red", "green", "blue");
+      console.log("colors=", colors);
+
+      //2. Object Array
+      const lang = [
+        {
+          id: 1,
+          name: "kannada",
+        },
+        {
+          id: 2,
+          name: "Telegu",
+        },
+        {
+          id: 3,
+          name: "Hindi",
+        },
+      ];
+      console.log("lang=", lang);
+
+      //3. json array
+      let empDetails = {
+        " firstName": "java",
+       " lastName": "script",
+        "pincode": 123535,
+      };
+      console.log(empDetails);
+    </script>
+  </body>
+</html>
