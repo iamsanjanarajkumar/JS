@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-BASICS</title>
+  </head>
+  <body>
+    <h3>LOOPING STATEMENTS</h3>
+    <!--
+        for(init;condition;ic/dec)
+        while(condition)
+        do while(condition)
+        forEach()
+        for..in
+        for ...of
+        for...await..of
+    -->
+
+    <script>
+      var a = prompt("Enter any number...");
+      var x = Number(a);
+      /*for (init;condition;inc/dec)*/
+      for (let i = 1; i <= x; i++) {
+        document.write(`<h3>${x} * ${i}= ${x * i}</h3>`);
+      }
+    </script>
+  </body>
+</html>
