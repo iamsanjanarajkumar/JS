@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-BASICS</title>
+  </head>
+  <body>
+    <h1>REMINDER OF 2 NUMBERS</h1>
+    <button onclick="submitHandler();">CLICK HERE TO CALCULATE</button>
+    <div id="result"></div>
+
+    <script>
+      function submitHandler() {
+        let x = window.prompt("enter input 1?");
+        let y = prompt("enter input 2?");
+
+        console.log("x=", x, "-", "y=", y);
+
+        let res = Number(x) % Number(y);
+        // document.getElementById("result").innerHTML= `<h3>REM OF x%y = ${res} </h3>`;
+        document.getElementById("result").innerHTML =
+          "<h3>REM OF x%y = " + res + " </h3>";
+      }
+    </script>
+  </body>
+</html>

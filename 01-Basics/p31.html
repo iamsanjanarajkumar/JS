@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h1>Converting values to string</h1>
+      <p>Check the output in browser console</p>
+    </center>
+    <hr />
+    <script>
+      document.write("<h1>converting values into string</h1>");
+      var bool = true;
+      document.write(typeof bool + "<br>");
+      var strl = string(bool);
+      document.write(typeof strl + "<br>");
+
+      var a = 33;
+      var isAdmin = true;
+      var x = 243.33;
+
+      console.log("a=", typeof a);
+      console.log("isAdmin=", typeof isAdmin);
+      console.log("x=", typeof x);
+
+      // string() console
+
+      var o1 = string(a);
+      var o2 = string(isAdmin);
+      var o3 = string(x);
+
+      console.log("a=", typeof o1);
+      console.log("isAdmin=", typeof o2);
+      console.log("x=", typeof o3);
+
+      String(123); //return 123
+      String(100 + 23); //return 123
+      String(true);
+      String(false);
+      String(123e-1);
+      String(0xff);
+      String(undefined);
+      String(null);
+    </script>
+  </body>
+</html>

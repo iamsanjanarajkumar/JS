@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-EVENTS</title>
+    <style>
+      #txt {
+        background-color: teal;
+        color: white;
+        padding: 12px;
+        width: 50%;
+        height: 500px;
+        overflow: auto;
+      }
+      h4 {
+        padding: 10px;
+        background-color: crimson;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1>onmousewheel() and onscroll()</h1>
+    </center>
+    <h4 id="output"></h4>
+
+    <div id="txt" onmousewheel="wheelHandler()" onscroll="wheelHandler()">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla
+        temporibus in culpa numquam doloremque, reiciendis quaerat praesentium
+        vitae ab, id illo quam autem repudiandae! Possimus aspernatur vel
+        adipisci impedit dolorem!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
+        consectetur amet doloremque corporis architecto modi eligendi voluptate
+        nobis voluptates nostrum similique distinctio, ea sint iste laborum
+        maiores incidunt consequuntur laudantium.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia sit
+        consequuntur sint praesentium repellat! Nulla, ipsam? Dignissimos autem,
+        deleniti veritatis repellat ratione dolorum laboriosam ea, harum totam
+        non, repellendus itaque?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere,
+        dolores quasi necessitatibus, eius, sint odio ad pariatur assumenda iste
+        hic praesentium. Dicta, iure ipsam. Ratione odio cupiditate inventore
+        rerum at.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+        exercitationem dolores quae, numquam odit magni dignissimos expedita
+        temporibus provident blanditiis, reprehenderit officiis cupiditate,
+        assumenda vel vero excepturi amet natus voluptas?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus amet
+        cum aspernatur labore illum, corrupti voluptates possimus quo iure?
+        Mollitia eos sint obcaecati adipisci quos! Eos corporis ut quos soluta?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum id iusto
+        esse ratione enim rerum distinctio voluptates molestias laborum, tenetur
+        illum cumque aliquam ipsam eum quae quam, labore provident fuga!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolor
+        rerum illum atque? Neque ipsam, eius recusandae obcaecati fugit
+        repellendus magni exercitationem est esse earum pariatur commodi, harum
+        tempore molestiae.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus
+        placeat, perferendis nostrum quod eos impedit blanditiis maxime nisi
+        asperiores consequuntur, quae fuga culpa nam repellendus sequi
+        consequatur doloremque recusandae deleniti.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est vero
+        fugiat iure optio, inventore, aperiam aspernatur quae labore beatae
+        accusantium fuga voluptatibus, veritatis quas dicta facere earum. Vitae,
+        hic eligendi?
+      </p>
+    </div>
+
+    <script>
+        function wheelHandler() {
+            let element =document.getElementById("txt");
+            document.getElementById("output").innerHTML = element.scrollTop + " px"
+        }
+    </script>
+</html>

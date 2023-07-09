@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Array using constructor</h1>
+    </center>
+    <hr>
+    <script>
+        var x =new Array();
+
+        x[0] = "Blue"
+        x[1] = "Red"
+        x[2] = "Black"
+        x[3] = "Crimson"
+
+        document.write(`<h3> ${x}</h3>`);
+        document.write(`<h3> ${x[3]}</h3>`);
+
+        x.forEach(function(item){
+            document.write(`<h2> ${item} </h2>`)
+        });
+    </script>
+</body>
+</html>

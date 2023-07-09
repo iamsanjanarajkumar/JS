@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-EVENTS</title>
+    <style>
+      body {
+        width: 100% auto;
+        height: 100vh;
+        background-color: #ccc;
+      }
+      .blk {
+        width: 50%;
+        background-color: crimson;
+        color: white;
+        padding: 12px;
+      }
+    </style>
+  </head>
+  <!-- event => event ref as a parameter to the handler function-->
+  <body oncontextmenu="contextHandler(event)">
+    <h3>oncontextmenu</h3>
+    <div class="blk" id="blk">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+        suscipit autem voluptates officia. Magni, delectus fuga amet impedit
+        distinctio minima suscipit possimus ab dolorum quibusdam atque culpa
+        dolorem laborum ipsum.
+      </p>
+    </div>
+
+    <script>
+      function contextHandler(event) {
+        event.preventDefault(); /*avoid page refresh*/
+        alert("Right click has displayed");
+      }
+    </script>
+  </body>
+</html>

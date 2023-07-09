@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-BASICS</title>
+    <style>
+      form {
+        display: flex;
+        border: 2px solid #222;
+        padding: 20px;
+        width: 50%;
+        margin: auto;
+        flex-direction: column;
+      }
+      form .form-group {
+        margin: 4px;
+      }
+      .form-group input {
+        padding: 12px 14px;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      #result {
+        padding: 20px;
+        width: 30%;
+        font-size: 1.2rem;
+        color: #fff;
+        background-color: orangered;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1>REM OF 2 NUMBERS</h1>
+    </center>
+    <hr />
+
+    <form onsubmit="submitHandler(event)" name="myForm">
+      <div class="form-group">
+        <label for="in1">ENTER INPUT-1</label>
+        <input type="number" id="in1" name="in1" required />
+      </div>
+      <div class="form-group">
+        <label for="in2">ENTER INPUT-2</label>
+        <input type="number" id="in2" name="in2" required />
+      </div>
+      <div class="form-group">
+        <!-- <input type="button" value="Calculate" class="btn" onclick="submitHandler()" /> -->
+        <input type="submit" value="Calculate" class="btn" />
+        <input type="reset" value="clear" />
+      </div>
+    </form>
+    <div id="result"></div>
+
+    <script>
+      function submitHandler(e) {
+        e.preventDefault(); //to avoid page refresh
+        //console.log('submit clicked')
+        let x = document.myForm.in1.value;
+        let y = document.getElementById("in2").value;
+
+        console.log("x=", x, "-", "y=", y);
+
+        let res = Number(x) % Number(y);
+        //document.getElementById('result').innerHTML= `<h3> Rem of 2 numbers =${res}</h3>`;
+
+        document.getElementById("result").innerHTML =
+          "<h3> REM OF x%y = " + res + "</h3>";
+      }
+    </script>
+  </body>
+</html>

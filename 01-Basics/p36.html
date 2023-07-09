@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Arrays</h3>
+    <!--
+        Array -> ia a group of value of similar type
+        types
+        1, literal type(single)
+        a, array literal
+        b, array using constructor
+        c,array as constructor parameter
+        2, object array
+        3, JSON(javascript object notation)Array
+    -->
+
+    <script>
+        // aray literal
+        var num=[12,2,33,44,55,66];
+        var user=['Ram','venu','Sourav','suma','Nandini'];
+        var arr=[true,124,"teju",123.345];
+
+        document.write(`<h3> ${arr[0]} </h3>`);
+        document.write(`<h3> ${arr} </h3>`);
+
+        document.write(`<h3> ${user[2]} </h3>`);
+        document.write(`<h3> ${user} </h3>`);
+
+        document.write(`<h3> ${num[4]} </h3>`);
+        document.write(`<h3> ${num} </h3>`);
+            
+        for(i=0;i<user.length;i++){
+            document.write(`<h3 style='color:red;'>${user[i]} </h3>`);
+        }
+    </script>
+</body>
+</html>

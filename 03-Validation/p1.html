@@ -1,8 +1,43 @@
-<html>
-    <head>
-        <title> HTML Syntax</title>
-    </head>
-    <body>
-        
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-VALIDATION</title>
+  </head>
+  <body>
+    <center>
+      <h1>Username validation</h1>
+    </center>
+    <hr />
+
+    <form action=" " autocomplete="off" onsubmit="validate(event)">
+      <label for="user">Username</label>
+      <input type="text" name="user" id="user" onkeyup="validate()" />
+      <strong id="status"></strong>
+      <br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+      function validate(event) {
+        event.preventDefault();
+        var user = document.getElementById("user");
+        var status = document.getElementById("status");
+        console.log("user =", user.value);
+
+        if (user.value.length == 0) {
+          status.innerText = "Enter user name";
+          status.style.color = "orangered";
+        } else if (user.value.length <= 4) {
+          status.inertText =
+            "user input length must be greater than 4 character ";
+          status.style.color = "orangered";
+        } else if (user.value.length > 4) {
+          status.inertText = "Valid username";
+          status.style.color = "green";
+        }
+      }
+    </script>
+  </body>
 </html>

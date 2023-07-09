@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-BASICS</title>
+  </head>
+  <body>
+    <h3>SCOPES</h3>
+    <script>
+      var x = 15;
+
+      /*let always have local (block) scopes */
+      //errors => syntax errors (compile errors)
+      //            logical errors(run-time errors) -exceptions
+      //try-catch block is used to handle run time errors (exception handling)
+
+      try {
+        if (x > 12) {
+          let a = 156;
+          document.write(`<h3>Local =${a}</h3>`); //block scope
+        }
+        document.write(`<h3>Global =${a}</h3>`); //global scope
+      } catch (error) {
+        console.log(error);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h1>type conversion using operator</h1>
+    </center>
+
+    <hr />
+    <script>
+      let x1 = "10"; // x is string
+      let y1 = +x1;
+      alert(typeof y1); //output:number
+      alert(y1); //output:10
+
+      let x2 = 10;
+      let y2 = x2 + "";
+      alert(typeof y2);
+      alert(y2);
+
+      let x3 = "35";
+      let y3 = x3 - 0;
+      alert(typeof y3);
+      alert(y3);
+
+      document.write("3" - 2 + "<br>");
+      document.write("3" + 2 + "<br>");
+      document.write(3 + "2" + "<br>");
+      document.write("3" * 2 + "<br>");
+      document.write("3" * "2" + "<br>");
+      document.write("10" / "2" + "<br>");
+    </script>
+  </body>
+</html>

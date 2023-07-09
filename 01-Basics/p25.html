@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-BASICS</title>
+  </head>
+  <body>
+    <p>1. Largest of two numbers using JS</p>
+    <p>2. Largest of three numbers using JS</p>
+    <p>3. Program to find out whether a given year is leap year or not</p>
+    <p>4. Find the given number whether it is palindrome or not</p>
+    <p>
+      5. Program to convert temperature from fahrenheit to celsius and
+      vice-versa
+    </p>
+    <p>6. Program to check the sign of a given number</p>
+    <p>7. Check whether a given number is even or odd</p>
+    <p>8. Check whether the triangle is equilateral ,scalene or isosceles</p>
+    <p>9. Program to check whether a character is an alphabet or not</p>
+    <p>10. Program to check whether it is a vowel or a consonant</p>
+    <p>11. Program to check Armstrong Number</p>
+
+    <!--Largest of two Numbers using Javascript-->
+    <h1>Largest of two number</h1>
+    <script>
+      var input1 = parseInt(prompt("Enter first number:"));
+      var input2 = parseInt(prompt("Enter second number:"));
+      if (input1 == input2) {
+        document.write("<h2>" + input1 + " is equal to " + input2 + "</h2>");
+      } else if (input1 > input2) {
+        document.write(
+          "<h2>" + input1 + " is greater  than " + input2 + "</h2>"
+        );
+      } else {
+        document.write("<h2>" + input1 + " is lesser than " + input2 + "</h2>");
+      }
+    </script>
+
+    <!--Largest of three numbers using javascript-->
+    <h1 style="color: brown">Largest of THREE NUMBERS</h1>
+    <script>
+      var input1 = parseInt(prompt("Enter first number:"));
+      var input2 = parseInt(prompt("Enter second number:"));
+      var input3 = parseInt(prompt("Enter third number:"));
+      if (input1 == input2 && input1 == input3) {
+        document.write("<h3>All numbers are equal</h3>");
+      } else if (input1 > input2 && input1 > input3) {
+        document.write(
+          "<h3>" +
+            input1 +
+            " is larger than " +
+            input2 +
+            " and " +
+            input3 +
+            "</h3>\n"
+        );
+      } else if (input2 > input1 && input2 > input3) {
+        document.write(
+          "<h3>" +
+            input2 +
+            " is larger than " +
+            input1 +
+            " and " +
+            input3 +
+            "</h3>"
+        );
+      } else if (input3 > input1 && input3 > input2) {
+        document.write(
+          "<h3>" +
+            input3 +
+            " is  larger than " +
+            input2 +
+            " and " +
+            input1 +
+            "</h3>"
+        );
+      }
+    </script>
+  </body>
+</html>

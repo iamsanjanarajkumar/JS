@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <center>
+      <h1>DOM</h1>
+    </center>
+    <hr />
+    <div id="info" class="disabled">Something very important!</div>
+
+    <script>
+      var elem = document.getElementById("info");
+      elem.className = "note ";
+      elem.className += "highlight";
+
+      elem.classList.add("hide"); //add a new class
+      elem.classList.add("note", "highlight", "visible"); //add multiple classes
+      elem.classList.remove("hide"); //remove a class
+      elem.classList.remove("disabled", "note"); //remove multiple classes
+      elem.classList.toggle("visible1"); // if class exists its removes ,  if not it adds a class
+    </script>
+  </body>
+</html>

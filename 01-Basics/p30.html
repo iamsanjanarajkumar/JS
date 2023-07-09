@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-BASICS</title>
+  </head>
+  <body>
+    <center>
+      <h1>DATATYPE CONVERSIONS</h1>
+    </center>
+    <hr />
+
+    <script>
+      let str = "123";
+      document.write(typeof str + "<br>"); //output : string
+      let num = Number(str); //Becomes a number 123
+      document.write(typeof num + "<br>"); //output :number
+
+      var number1 = Number("10.5");
+      document.write(typeof number1 + "<br>"); //output : number
+
+      var x = "123.234";
+      var y = "1233.678997990734";
+      var z = "Apple";
+
+      document.write(`<h3> X DATA TYPE IS = ${typeof x}</h3>`);
+      document.write(`<h3> Y DATA TYPE IS = ${typeof y}</h3>`);
+      document.write(`<h3> Z DATA TYPE IS = ${typeof z}</h3>`);
+
+      var a = Number(x); /*Convert to any type into number*/
+      document.write(`<h3> Number = ${a}</h3>`);
+
+      var a1 = parseInt(x); //int values
+      document.write(`<h3> int = ${a1}</h3>`);
+
+      var a2 = parseFloat(x); //decimal values
+      var a3 = parseInt(y);
+
+      let yy = 1234.58458459485;
+      document.write(`<h3> y  variable value is = ${yy}</h3>`);
+      document.write(`<h3> y variable value is = ${yy.toFixed()}</h3>`);
+      document.write(`<h3> y variable value is = ${yy.toFixed(1)} </h3>`);
+      document.write(`<h3> y variable value is = ${yy.toFixed(2)} </h3>`);
+      document.write(`<h3> y variable value is = ${yy.toFixed(3)} </h3>`);
+      document.write(`<h3> y variable value is = ${yy.toFixed(4)} </h3>`);
+
+      Number(true); //returns 1
+      Number(false); //returns 0
+      Number(null); //returns 0
+      Number("123"); //returns 123
+      Number("  "); //return 0
+      Number(""); //returns 0
+      Number("123e-1"); //returns 12.3
+      Number("0xFF"); //returns 255(hexadecimal representation)
+      Number("undefined"); //returns NaN -> Not A Number
+      Number("null"); //returns NaN
+      Number("Hello world"); // returns NaN
+    </script>
+  </body>
+</html>

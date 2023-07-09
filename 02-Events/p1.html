@@ -1,8 +1,27 @@
-<html>
-    <head>
-        <title> HTML Syntax</title>
-    </head>
-    <body>
-        
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h1>CLICK EVENT</h1>
+    </center>
+    <hr />
+
+    <button type="button" onclick="print()">Single Click</button>
+    <button type="button" ondblclick="print()">Double Click</button>
+
+    <script>
+      function print() {
+        alert("Welcome to click events");
+      }
+      //print();
+
+      //event -> Middleware  -> action listener
+      //it identifies the action on html dom and triggers the function to execute
+    </script>
+  </body>
 </html>

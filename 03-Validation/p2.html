@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-VALIDATION</title>
+  </head>
+  <body>
+    <center>
+      <h1>Email Validation</h1>
+    </center>
+    <hr />
+
+    <form action="" autocomplete="off">
+      <label for="user">Username</label>
+      <input type="email" name="email" id="email" onkeyup="validate()" />
+      <strong id="status"></strong>
+      <br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+      function validate() {
+        var email = document.getElementById("email").value;
+        var status = document.getElementById("status");
+        console.log("EMAIL =", email.value);
+
+        let regex = /^\S+@\S+\.\S+$/; // Example : admin@gmail.com
+
+        if (email.length == 0) {
+          status.innerText = "Enter your email address";
+          status.style.color = "orangered";
+        } else {
+          if (regex.test(email) === false) {
+            status.innerText = "Invalid email address";
+            status.style.color = "orangered";
+          } else {
+            status.innerText = "VALID email address";
+            status.style.color = "green";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
