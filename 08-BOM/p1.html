@@ -1,8 +1,41 @@
-<html>
-    <head>
-        <title> HTML Syntax</title>
-    </head>
-    <body>
-        
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOM</title>
+  </head>
+  <body>
+    <script>
+      function getResolution() {
+        alert("Your Screen is " + screen.width + "x " + screen.height);
+      }
+    </script>
+    <button type="button" onclick="getResolution();">Get Resolution</button>
+
+    <script>
+      function getAvailSize() {
+        alert(
+          "Available Screen width " +
+            screen.availWidth +
+            ",Height " +
+            screen.availHeight
+        );
+      }
+    </script>
+    <button type="button" onclick="getAvailSize()">Get Available Size</button>
+    <script>
+      function getColorDepth() {
+        alert("Your Screen color depth is:" + screen.colorDepth);
+      }
+    </script>
+    <button type="button" onclick="getColorDepth()">Get Color Depth</button>
+
+    <script>
+      function getPixelDepth() {
+        alert("Your Screen pixel depth is:" + screen.pixelDepth);
+      }
+    </script>
+    <button type="button" onclick="getPixelDepth()">Get Pixel Depth</button>
+  </body>
 </html>
