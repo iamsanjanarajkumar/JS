@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOJS</title>
+  </head>
+  <body>
+    <center>
+      <h1>constructor methods (ES-S)</h1>
+    </center>
+    <hr />
+    <script>
+      //constructor follows function and object
+      //name of constructor forst letter starts with uppercase
+      //constructor properties create using 'this'
+      //creat an instance to constructor using 'new'
+      //constructor cant return
+
+      function user(){
+          this.name = "Sonu";
+          this.email= "sonu@gmail";
+          this.age ="22";
+          let a=12;
+
+      };
+      //instance -> it is a variable we provide permission to access the properties of constructor
+      let x=new user();
+      console.log("constructor instance=",x);
+      document.write(`<h1>name=${x.name}</h1>`);
+      document.write(`<h1>name=${x.email}</h1>`);
+      document.write(`<h1>name=${x.age}</h1>`);
+    </script>
+  </body>
+</html>

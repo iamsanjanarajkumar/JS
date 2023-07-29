@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Accesoe properties(get and set)</h1>
+        <p>consider we have 2 functions inside an object, one to set the value and another to get the value from it</p>
+    </center>
+    <hr>
+    <script>
+        var user={
+            name:"john",
+            surName:"thosh",
+            email:"tejasthosh"
+        };
+        Object.defineProperty(user,'fullName',{
+            get: function(){
+                return this.name+ +this.surName;
+            }
+        });
+        console.log("user",user)
+        console.log('fullName=',user.fullName);//john thosh
+
+        user.surName="Banglore";
+         
+        console.log("user",user)
+        console.log('fullName=',user.fullName);//john Banglore
+
+        user.name="Tejas";
+        console.log("user",user)
+        console.log('fullName=',user.fullName)//Tejas Banglore
+
+
+    </script>
+</body>
+</html>

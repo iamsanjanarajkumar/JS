@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>object to array conversion</h1>
+    </center>
+    <hr>
+    <script>
+        var user={
+            name:"Tejas",
+            email:"tejasthosh",
+            age:22
+        };
+
+        var res= Object.keys(user).map(function(key){
+            return user[key];//value
+        });
+        console.log('res=',res);
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOJS</title>
+  </head>
+  <body>
+    <center>
+      <h1>Functions , Arrays & Objects as Properties</h1>
+    </center>
+    <hr />
+
+    <script>
+      let user = {
+        name: "Mohan",
+        email: "mohan@gmail.com",
+        hobbies: ["cycling", "riding", "driving"],
+        getName: function () {
+          //function definition
+          document.write(`<h3> My Name is ${this.name}</h3>`);
+        },
+        getEmail: () => {
+          //this pointer is not accessible inside the arrow function(function expression)
+          document.write(`<h3> My Email is ${this.email} </h3>`);
+        },
+        address: {
+          city: "Bengaluru",
+          pincode: 560073,
+        },
+        
+        getAddress: function () {
+          return this.address.city + ",pin=" + this.address.pincode;
+        },
+      };
+      document.write(`<h3> Object =${user.name}</h3>`);
+      document.write(`<h3> Hobbies = ${user["hobbies"]}</h3>`);
+
+      user.getName();
+      user.getEmail();
+
+      document.write(`<h3> Address City = ${user.address.city}</h3>`);
+      document.write(`<h3> Address zip = ${user["address"]["zip"]}</h3>`);
+      document.write(`<h3> Address = ${user.getAddress()}</h3>`);
+    </script>
+  </body>
+</html>

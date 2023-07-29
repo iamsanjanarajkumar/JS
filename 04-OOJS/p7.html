@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOJS</title>
+  </head>
+  <body>
+    <center>
+      <h1>Object Methods = defineProperty(Object , key,{value:xx})</h1>
+    </center>
+    <script>
+      var user = {
+        name: "John",
+      };
+
+      //defineProperty is used to create properties of the object externally.
+
+      Object.defineProperty(user, "email", { value: "john@example.com" });
+      Object.defineProperty(user, "age", { value: 22 });
+
+      console.log("User = " , user);
+    </script>
+  </body>
+</html>

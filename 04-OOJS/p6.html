@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOJS</title>
+  </head>
+  <body>
+    <center>
+      <h1>Object Methods</h1>
+    </center>
+    <script>
+      //Object.setPrototype({},cloned Object) -> overwrites the properties of cloned object
+      const user = {
+        name: "Raj",
+        email: "raj@gmail.com",
+        mobile: "98924210300",
+        age: 25,
+      };
+      //   console.log(`user= `, user);
+
+      const user1 = Object.create(user);
+      console.log(`Before set users1= `, user1);
+
+      let emp = {
+        bank: "SBI",
+        acc: 123440,
+        total: 23455,
+      };
+      Object.setPrototypeOf(user1, emp);
+      console.log(`After set users1= `, user1);
+    </script>
+  </body>
+</html>

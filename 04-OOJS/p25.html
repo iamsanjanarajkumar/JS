@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>PROTOTYPE</h1>
+    </center>
+    <hr>
+    <script>
+        function user(){
+            this.name= "Manu";
+            this.getName = function(){
+                document.write(`<h3>my name is ${this.name}</h3>`);
+            }
+            this.display= function(){
+
+            }
+        }
+
+        //constructor.prototype.property = value;
+        user.prototype.email="mabu@gmail";
+        user.prototype.getEmail=()=>{
+            document.write(`<h3>email = ${x.email} </h3>`);
+
+        };
+
+        let x= new user();
+
+        console.log("user instance=",x);
+        document.write(`<h3>email = ${x.email} </h3>`);
+        document.write(`<h3>name = ${x.name} </h3>`);
+
+        x.getName();
+        x.getEmail();
+
+    </script>
+</body>
+</html>

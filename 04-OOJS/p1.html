@@ -1,8 +1,74 @@
-<html>
-    <head>
-        <title> HTML Syntax</title>
-    </head>
-    <body>
-        
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOJS</title>
+  </head>
+  <body>
+    <center>
+      <h1>JAVASCRIPT OBJECT</h1>
+    </center>
+    <hr />
+    <ol>
+      <li>
+        Literal Type (single)
+        <ul>
+          <li>Object Literal</li>
+          <li>
+            Creating instance of an Object directly (using Constructor method)
+          </li>
+          <li>Using an Object Constructor(using constructor parameter)</li>
+        </ul>
+      </li>
+      <li>Object Array</li>
+      <li>
+        JSON(JAVASCRIPT Object Notation) Array (Response of REST
+        [Representational State Transfer]) API
+      </li>
+    </ol>
+    <hr />
+    <center>
+      <h1>Literal Object</h1>
+      <p>key: value=> property of an object</p>
+    </center>
+    <p><strong>SYNTAX :</strong></p>
+    <pre>
+           let literalObjectName = {
+                    "key1": "value1",
+                    "key2": "value2,
+                    "key3": "value3,
+                    "key4": "value4",
+                };
+                console.log(literalObjectName);
+                console.log(typeof (literalObjectName));
+                console.log(literalObjectName.key1);
+                
+            </pre
+    >
+    <hr />
+
+    <script>
+      let x = "Hello";
+      document.write(`<h3> TypeOf x =${typeof x}</h3>`);
+      document.write(`<h3> let x = ${x}</h3>`);
+
+      let car = {
+        //key: value => property of an object
+        "model": 2023,
+        "color": "red",
+        "brand": "ETIOS",
+        "company": "Toyota",
+        "isRunnable": true,
+      };
+      document.write(`<h3> TypeOf Car = ${typeof(car)}</h3>`);
+      document.write(`<h3> let car =${car} </h3>`);
+
+      document.write(`<h3> car model = ${car.model} </h3>`);
+      document.write(`<h3> car color = ${car.color} </h3>`); //object.key
+      document.write(`<h3> car brand = ${car["brand"]} </h3>`); //object['key']
+      document.write(`<h3> car company = ${car.company} </h3>`);
+      document.write(`<h3 car isRunnable = ${car.isRunnable} </h3>`);
+    </script>
+  </body>
 </html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOJS</title>
+  </head>
+  <body>
+    <center>
+      <h1>CLASS ES-6</h1>
+    </center>
+    <hr />
+
+    <script>
+      // Class => Group of objects
+      // Objects => Group of state (variables) and behaviors (methods)
+
+      class User {
+        constructor() {
+          this.name = "Manju";
+          this.email = "manju@gmail.com";
+          this.age = 23;
+          this.isAdmin = true;
+          (this.hobbies = ["Trekking", "Cycling", "Riding"]),
+            (this.account = {
+              bank: "SBI",
+              accNo: 123445,
+            });
+        }
+
+        getUserInfo() {
+          return this.name;
+        }
+
+        getEmail() {
+          document.write(`<h3> My Email is : ${this.email}</h3>`);
+        }
+      }
+
+      let x = new User();
+
+      console.log("x =", x);
+
+      document.write(`<h1> name = ${x.name} </h1>`);
+      document.write(`<h1> email = ${x.email} </h1>`);
+      document.write(`<h1> age = ${x.age} </h1>`);
+      document.write(`<h1> isAdmin = ${x.isAdmin} </h1>`);
+
+      document.write(`<h1> Method getUserInfo = ${x.getUserInfo()} </h1>`);
+
+      x.getEmail();
+
+      x.hobbies.forEach((item, index) => {
+        document.write(`<p> ${index} ${item} </p>`);
+      });
+
+      document.write(`<h1> Bank Name = ${x.account.bank} </h1>`);
+      document.write(`<h1> Account Number = ${x.account.accNo} </h1>`);
+    </script>
+  </body>
+</html>

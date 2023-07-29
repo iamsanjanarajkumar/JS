@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple CRUD Operations using JS-Local Storage</title>
+    <link rel="stylesheet" href="Assets/css/style.css" />
+    <link rel="stylesheet" href="Assets/css/media.css" />
+  </head>
+  <body>
+    <header class="container">
+      <h1>CRUD-LOCAL STORAGE</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="create.html">Create</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h1 class="title">CREATE A DATA</h1>
+
+    <form class="container insertBox" onsubmit="insertData(event)">
+      <div>
+        <h3>INSERT/UPDATE DATA</h3>
+        <input type="text" name="name" id="name" placeholder="Name" />
+        <input type="email" name="email" id="email" placeholder="Email" />
+        <input type="number" name="mobile" id="mobile" placeholder="Mobile" />
+        <input type="url" name="image" id="image" placeholder="Image" />
+        <textarea name="about" id="about" placeholder="About User"></textarea>
+        <input type="submit" value="Insert Data" />
+      </div>
+    </form>
+
+    <script src="Assets/js/script.js"></script>
+  </body>
+</html>

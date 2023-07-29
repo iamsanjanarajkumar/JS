@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>CLASS</h1>
+        <h3>Class ES-6 -> group of an Objects(State and Behaviour)</h3>
+        <p>state => variables -> properties</p>
+        <p>Behaviour -> methods</p>
+    </center>
+    <hr>
+    <h3>class syntax contains two components</h3>
+    <ol>
+        <li>Class Declarations</li>
+        <li>Class Expressions</li>
+    </ol>
+    <hr>
+    <script>
+        class Test{
+            constructor(){
+                document.write(`<h1>WELCOME TO TEST CLASS</h1>`);
+            }
+        }
+        let test = new Test();
+
+        class Student1{
+            constructor(){}
+            getData(){
+                let text ="THIS IS A getData METHOD";
+                document.write(`<h1>${text}</h1>`);
+            
+            }
+        }
+        let Student1 = new Student1();
+        student1.getData();
+
+    </script>
+</body>
+</html>

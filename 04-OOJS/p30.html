@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOJS</title>
+  </head>
+  <body>
+    <center>
+      <h1>Class ES-6</h1>
+      <p>Finding Even or odd using Class</p>
+    </center>
+    <hr />
+    <form onsubmit="submitHandler(event)">
+      <div class="input">
+        <label for="num">Enter a number</label>
+        <input type="number" name="num" id="num" required />
+      </div>
+      <div class="input">
+        <button type="submit" class="btn">SUBMIT</button>
+      </div>
+    </form>
+    <hr />
+    <div id="result"></div>
+
+    <script>
+      function submitHandler(event) {
+        event.preventDefault();
+        let num = Number(document.getElementById("num").value);
+        let x1 = new EvenOrOdd(num);
+        document.getElementById("result").innerHTML = `<h1>${x1.find()}</h1>`;
+      }
+      class EvenOrOdd {
+        constructor(val) {
+          this.num = val;
+        }
+        find() {
+          if (this.num % 2 === 0) {
+            return `${this.num} is Even `;
+          } else {
+            return `${this.num} is Odd`;    
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
