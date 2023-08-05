@@ -6,12 +6,13 @@
     <title>DOM</title>
   </head>
   <body>
-    <h3>document.hasFocus()</h3>
+    <h3>document.hasFocus()</h3><!--Application of hasFocusin online examinations and bank transactions to check whether the current page is focused or not-->
     <p id="log">Awaiting focus check</p>
     <button onclick="handler()">Click Me</button>
 
     <script>
       function handler() {
+        /*BOM*/
         window.open(
           "https://www.youtube.com/",
           "youtube",
@@ -32,7 +33,7 @@
           body.style.color = "#ccc";
         }
       }
-      setInterval(checkPageFocus, 4000);
+      setInterval(checkPageFocus, 300);
     </script>
   </body>
 </html>

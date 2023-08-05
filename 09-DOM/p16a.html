@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <h1>document.cookie</h1>
+    <h1 id="result"></h1>
+
+    <button onclick="set()">Set Cookie</button>
+    <script>
+        function set(){
+            var x = prompt("enter your input");
+            document.cookie =`userId=${x};expires=5 AUG 2023 12:00:00 AM GMT+5:30`;
+            alert("Cookie set successfully!");
+            window.location.reload();/* refreshing the current page */
+        }
+        //self trigger function
+        (function(){
+            console.log(document.cookie);//string output
+            let res = document.cookie.split("=");//break string into an array of strings
+            console.log('res=',res[0]);
+            console.log('res=',res[1]);
+            document.getElementById('result').innerText = `key=${res[0]} and value=${res[1]}`; 
+
+        })();
+    </script>
+</body>
+</html>
