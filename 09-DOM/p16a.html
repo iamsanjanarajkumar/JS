@@ -1,31 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OOJS</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
     <h1>document.cookie</h1>
     <h1 id="result"></h1>
 
     <button onclick="set()">Set Cookie</button>
+    <button onclick="clearHandler()">Clear Cookie</button>
     <script>
-        function set(){
-            var x = prompt("enter your input");
-            document.cookie =`userId=${x};expires=5 AUG 2023 12:00:00 AM GMT+5:30`;
-            alert("Cookie set successfully!");
-            window.location.reload();/* refreshing the current page */
-        }
-        //self trigger function
-        (function(){
-            console.log(document.cookie);//string output
-            let res = document.cookie.split("=");//break string into an array of strings
-            console.log('res=',res[0]);
-            console.log('res=',res[1]);
-            document.getElementById('result').innerText = `key=${res[0]} and value=${res[1]}`; 
+      function set() {
+        var x = prompt("enter your input");
+        document.cookie = `userId=${x};expires=8 AUG 2023 12:00:00 AM GMT+5:30`;
+        alert("Cookie set successfully!");
+        window.location.reload(); /* refreshing the current page */
+      }
+      //clear cookies
+      function clearHandler() {
+        if (confirm("Are you sure you want to clear cookies?")) {
+          let myTime = new Date();
 
-        })();
+          myTime.setTime(myTime.getTime() - 1);
+          console.log('getTime',myTime.getTime());
+          console.log("myTime", myTime.toGMTString());
+          document.cookie = `userId=;expires=${myTime.toGMTString()}`;
+          alert("Cookies cleared Successfully");
+          window.location.reload(); //page refresh current active page
+        } else {
+          console.log("failed to clear cookies");
+        }
+      }
+      //self trigger function
+      (function () {
+        console.log(document.cookie); //string output
+        let res = document.cookie.split("="); //break string into an array of strings
+        console.log("res=", res[0]);
+        console.log("res=", res[1]);
+        document.getElementById(
+          "result"
+        ).innerText = `key=${res[0]} and value=${res[1]}`;
+      })();
     </script>
-</body>
+  </body>
 </html>

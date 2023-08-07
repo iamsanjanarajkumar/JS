@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOJS</title>
+  </head>
+  <body>
+    <center>
+      <h1>ARRAY METHODS</h1>
+    </center>
+    <hr />
+
+    <h3>Searching through an Array</h3>
+    <hr />
+
+    <script>
+      document.write("<h4>Array...</h4>");
+      let pets = ["cat", "dog", "Parrot"];
+
+      document.write(pets.indexOf("cat") + "<br />"); //prints 0
+      document.write(pets.indexOf("dog") + "<br />"); //prints 1
+      document.write(pets.indexOf("Parrot") + "<br />"); //prints 2
+      document.write(pets.indexOf("fish") + "<br />"); //prints-1
+
+      let p = ["apple", "orange", "pineapple", "apple"];
+      document.write(p.lastIndexOf("apple") + "<br />");
+    </script>
+  </body>
+</html>
+

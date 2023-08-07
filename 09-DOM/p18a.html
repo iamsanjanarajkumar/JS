@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      .container {
+        width: 50%;
+        margin: auto;
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px;
+      }
+      .container select{
+        width: 200px;
+      }
+      .container .btn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>document.querySelectorAll & replaceChildren</h1>
+    <form>
+      <section class="container">
+        <div class="left">
+          <select name="no" id="no" size="10" multiple="multiple">
+            <option value="blue">blue</option>
+            <option value="white">white</option>
+            <option value="black">black</option>
+            <option value="red">red</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+            <option value="orange">orange</option>
+            <option value="purple">purple</option>
+            <option value="orange">orange</option>
+            <option value="red">red</option>
+            <option value="gold">gold</option>
+          </select>
+        </div>
+        <div class="btn">
+            <button id="add">Add Selection</button>
+            <button id="remove">Remove  Selection</button>
+        </div>
+        <div class="right">
+            <select name="yes" id="yes" size="10" multiple="multiple"></select>
+        </div>
+      </section>
+    </form>
+    <script src="Assets/JS/dropSelect.js"></script>
+  </body>
+</html>
