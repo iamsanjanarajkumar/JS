@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructor</title>
+  </head>
+  <body>
+    <h3>Custom Constructor</h3>
+    <script>
+      //non-params - fixed
+      function person() {
+        let x = 23;
+        this.name = "Raju"; //fixed type
+        this.email = "raju@gmail.com";
+        this.getName = () => {
+          return this.name;
+        };
+        this.getEmail = () => {
+          document.write(`<h3> Email ${this.email}</h1>`);
+        };
+      }
+      let x = new person(); //x - instance of person
+      document.write(`<h1> ${x.getName()}</h1>`);
+      x.getEmail();
+
+      //parameterized - reusable
+      function User(na, em) {
+        this.name = na;
+        this.email = em;
+        this.getName = () => {
+          return this.name;
+        };
+        this.getEmail = () => {
+          document.write(`<h3> Email ${this.email}</h1>`);
+        };
+      }
+      let y = new User("sanjana", "sanjana@gmail.com");
+      document.write(`<h2> ${y.getName()}</h2>`);
+      y.getEmail();
+      let y1 = new User("john", "john@gmail.com");
+      document.write(`<h2> ${y1.getName()}</h2>`);
+      y1.getEmail();
+       y = new User("Rachel", "rachel@gmail.com");
+      document.write(`<h2> ${y.getName()}</h2>`);
+      y.getEmail();
+    </script>
+  </body>
+</html>

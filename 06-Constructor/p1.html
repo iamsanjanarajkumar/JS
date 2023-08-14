@@ -1,8 +1,38 @@
-<html>
-    <head>
-        <title> HTML Syntax</title>
-    </head>
-    <body>
-        
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructor</title>
+  </head>
+  <body>
+    <h1>Date Constructor (Date Object)</h1>
+    <script>
+      var x = new Date(); /* x is an instance to constructor */
+      document.write(`<h3> ${x} </h3>`);
+
+      document.write(`<h3> Day = ${x.getDay()} </h3>`);
+      document.write(`<h3> Date = ${x.getDate()} </h3>`);
+      document.write(
+        `<h3> Month = ${x.getMonth()} </h3>`
+      ); /*0 -> jan 11-> dec*/
+      document.write(`<h3> Year = ${x.getFullYear()} </h3>`);
+
+      document.write(`<h3> Hour = ${x.getHours()} </h3>`);
+      document.write(`<h3> minute = ${x.getMinutes()} </h3>`);
+      document.write(`<h3> second = ${x.getSeconds()} </h3>`);
+      document.write(`<h3> milliseconds = ${x.getMilliseconds()} </h3>`);
+
+      /*GMT - Greenwich Mean Time / UTC -> Coordinated Universal Time*/
+      document.write(`<h3> UTC Date = ${x.getUTCDate()} </h3>`);
+      document.write(`<h3> UTC Day = ${x.getUTCDay()} </h3>`);
+      document.write(`<h3> UTC Month = ${x.getUTCMonth()} </h3>`);
+      document.write(`<h3> UTC year = ${x.getUTCFullYear()} </h3>`);
+
+      document.write(`<h3> UTC hour = ${x.getUTCHours()} </h3>`);
+      document.write(`<h3> UTC minute = ${x.getUTCMinutes()} </h3>`);
+      document.write(`<h3>  UTC second = ${x.getUTCSeconds()} </h3>`);
+      document.write(`<h3>  UTCmillisecond = ${x.getUTCMilliseconds()} </h3>`);
+    </script>
+  </body>
 </html>

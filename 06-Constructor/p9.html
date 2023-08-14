@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructor</title>
+  </head>
+  <body>
+    <h1>Object Constructor(using instance)</h1>
+    <script>
+      var x = new Object();
+      console.log("x", x); //instance of an object
+
+      //instance.key=value
+      (x.name = "Raj"),
+        (x.email = "raj@example.com"),
+        (x.mobile = "12897"),
+        (x["age"] = 23);
+
+      console.log("object x ", x);
+    </script>
+  </body>
+</html>

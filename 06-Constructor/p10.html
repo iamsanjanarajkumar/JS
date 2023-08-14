@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructor</title>
+  </head>
+  <body>
+    <h3>Object using Constructor Parameter</h3>
+    <script>
+      let x = new Object({
+        title: "Javascript",
+        fee: "123123",
+        duration: "2 month",
+      });
+
+      console.log(x);
+
+      document.write(`<h3> ${x} </h3>`);//Object destructuring on DOM
+      document.write(`<h3> ${x.title}</h3>`);
+      document.write(`<h3> ${x.fee} </h3>`);
+      document.write(`<h3> ${x.duration} </h3>`);
+    </script>
+  </body>
+</html>

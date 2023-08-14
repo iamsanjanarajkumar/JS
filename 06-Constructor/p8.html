@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructor</title>
+  </head>
+  <body>
+    <h3>Object</h3>
+    <script>
+      var x = []; //array
+      var y = {}; //object
+    </script>
+    <script>
+      var user = {
+        //key:value , =>property
+        name: "Raj",
+        email: "raj@example.com",
+        age: 33,
+        isView: true,
+        hobbies: ["driving", "riding"],
+      };
+
+      console.log("user", user);
+
+      document.write(`<h2> name =${user}</h2>`);//cant destructure the object 
+      document.write(`<h2> name =${user.name}</h2>`);
+      document.write(`<h2> email =${user["email"]}</h2>`);
+    </script>
+  </body>
+</html>

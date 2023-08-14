@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructor</title>
+  </head>
+  <body>
+    <h3>Boolean</h3>
+    <script>
+      var status = "true";
+
+      var x = new Boolean(10 < 12);
+      var y = new Boolean(10 > 12);
+      var x2 = new Boolean(status);
+
+      document.write(`<h3> 10<12 = ${x}</h3>`);
+      document.write(`<h3> 10>12 = ${y}</h3>`);
+
+      document.write(`<h3> Before: ${typeof status} </h3>`);
+      document.write(`<h3> After: ${typeof x2} </h3>`);
+    </script>
+  </body>
+</html>

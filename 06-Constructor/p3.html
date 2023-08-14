@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructor</title>
+    <style>
+        #myClock{
+            background-color: thistle;
+            color: #fff;
+            font-weight: bold;
+            width: 300px;
+            padding: 12px;
+            position: absolute;
+            right: 100px;
+            top: 0;
+            font-size: 3em;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Digital Clock</h1>
+    <h3 id="myClock"></h3>
+
+    <script>
+      function digiClock() {
+        var today = new Date();
+        document.getElementById("myClock").innerText =
+          today.toLocaleTimeString();
+      }
+      /*Time*/
+      setInterval(function () {
+        digiClock();
+      }, 1000); /*1000ms= 1s*/
+    </script>
+  </body>
+</html>
