@@ -15,15 +15,15 @@
     <label for="">Choose tech</label>
     <select name="tech" id="tech" onchange="selHandler()">
       <option value="null">Choose Technology</option>
-      <option value="html">HTML</option>
-      <option value="css">CSS</option>
-      <option value="js">JS</option>
-      <option value="jquery">JQuery</option>
+      <option>HTML</option>
+      <option>CSS</option>
+      <option>JS</option>
+      <option>JQuery</option>
     </select>
 
     <script>
       function selHandler() {
-        let tech = document.write("tech").value;
+        let tech = document.getElementById("tech").value;
         if (tech == "null") {
           document.getElementById("output").innerText = "no value selected ";
         } else {

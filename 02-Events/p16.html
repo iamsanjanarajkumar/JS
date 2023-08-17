@@ -7,12 +7,7 @@
   </head>
   <body>
     <h3>focusIn & focusOut</h3>
-    <form
-      action=""
-      id="myForm"
-      onfocusin="addFocus(event)"
-      onfocusout="removeFocus(event)"
-    >
+    <form action="" id="myForm">
       <label for="user">Username </label>
       <input type="text" name="user" id="user" required />
 
@@ -25,16 +20,16 @@
 
       //selector.addEventListener(eventName, handler);
 
-      function addFocus(event) {
+      form.addEventListener("focusin", function (event) {
         event.target.style.background = "#ff33ff";
         event.target.style.borderColor = "#34ff44";
         event.target.style.outlineColor = "#34ff44";
-      }
-      function removeFocus(event) {
+      });
+      form.addEventListener("focusout", function (event) {
         event.target.style.background = "#ccc";
         event.target.style.borderColor = "#ff2200";
         event.target.style.outlineColor = "#ff2200";
-      }
+      });
     </script>
   </body>
 </html>
