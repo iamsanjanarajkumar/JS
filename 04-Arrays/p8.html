@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARRAY</title>
+  </head>
+  <body>
+    <h3>
+      UNSHIFT() & SHIFT() {add & remove items from the beginning of an array}
+    </h3>
+    <!--unshift(val) add new item at the beginning of an array
+      shift() remove item from an array  -->
+
+    <script>
+      var x = ["blue", "white"];
+      document.write(`<h3> before unshift = ${x}</h3>`);
+      x.unshift("pink");
+      document.write(`<h3> after unshift = ${x} </h3>`);
+      x.unshift("brown");
+      document.write(`<h3> after unshift = ${x} </h3>`);
+
+      x.shift();
+      document.write(`<h3> after shift = ${x} </h3>`);
+      x.shift();
+      document.write(`<h3> after shift = ${x} </h3>`);
+    </script>
+  </body>
+</html>

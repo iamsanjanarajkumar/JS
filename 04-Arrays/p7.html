@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUSH() & POP()</title>
+</head>
+<body>
+    <h3>PUSH() & POP(){add & remove items from the end of an array} </h3>
+    <!-- push(val) add new item at the end of an array
+        pop() remove new item from the end of an array-->
+
+        <script>
+            var x= ['blue','white'];
+            document.write(`<h3> before push =${x}</h3>`);
+            x.push('pink');
+            document.write(`<h3> after push =${x}</h3>`);
+            x.push('yellow');
+            document.write(`<h3> after push =${x}</h3>`);
+
+            x.pop();
+            document.write(`<h3> after pop =${x}</h3>`);/*yellow*/
+            x.pop();
+            document.write(`<h3> after pop =${x}</h3>`);/*pink*/
+            x.pop();
+            document.write(`<h3> after pop =${x}</h3>`);/*white*/
+
+        </script>
+</body>
+</html>
