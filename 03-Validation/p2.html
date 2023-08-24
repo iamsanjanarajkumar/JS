@@ -12,7 +12,7 @@
     <hr />
 
     <form action="" autocomplete="off">
-      <label for="user">Username</label>
+      <label for="user">Email-Id</label>
       <input type="email" name="email" id="email" onkeyup="validate()" />
       <strong id="status"></strong>
       <br /><br />
@@ -27,7 +27,7 @@
 
         let regex = /^\S+@\S+\.\S+$/; // Example : admin@gmail.com
 
-        if (email.length == 0) {
+        if (email === "") {
           status.innerText = "Enter your email address";
           status.style.color = "orangered";
         } else {

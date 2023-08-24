@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expressions</title>
+</head>
+<body>
+    <h1>test()</h1>
+
+    <script>
+        var input = "welcome";
+
+        var re = /[a-z]/;//input at least should contain one lowercase letter
+         if(re.test(input)) {
+            console.log("matches");
+
+         } else{
+            console.log(" not matches");
+         }
+    </script>
+</body>
+</html>

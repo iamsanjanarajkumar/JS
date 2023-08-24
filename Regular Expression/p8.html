@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regular Expressions</title>
+  </head>
+  <body>
+    <h3>Replacing the position of Two Words</h3>
+    <script>
+      var str = "Hello world!";
+      var re = /(\w+)\s(\w+)/;
+
+      var newStr = str.replace(re, "$2,$1");
+
+      console.log(`new string =`, newStr);
+
+      //\w+ -> matches any word character. The + indicates that there has to be atleast one word
+    </script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation Form</title>
+    <link rel="stylesheet" href="Assets/CSS/validate.css">
+  </head>
+  <body>
+    <form name="cForm" onsubmit="return validate(event)" method="post">
+      <h2>Contact Form</h2>
+      <div class="row">
+        <label for="name">FullName</label>
+        <input type="text" name="name" id="name" />
+        <strong class="error" id="nameErr"></strong>
+      </div>
+
+      <div class="row">
+        <label for="email">Email-Id</label>
+        <input type="text" id="email" name="email" />
+        <strong class="error" id="emailErr"></strong>
+      </div>
+
+      <div class="row">
+        <label for="mobile">Mobile Number</label>
+        <input type="text" id="mobile" name="mobile" maxlength="10" />
+        <strong class="error" id="mobileErr"></strong>
+      </div>
+
+      <div class="row">
+        <label for="city">City</label>
+        <select id="city" name="city">
+          <option value="null">Choose a City Name</option>
+          <option value="bng">Bengaluru</option>
+          <option value="mys">Mysore</option>
+          <option value="hsn">Hassan</option>
+          <option value="dvg">Davanagere</option>
+        </select>
+        <strong class="error" id="cityErr"></strong>
+      </div>
+
+      <div class="row">
+        <label for="gender">Gender</label>
+        <div class="form-inline">
+          <label>
+            <input type="radio" name="gender" value="male" id="gender" />Male
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="gender"
+              value="female"
+              id="gender"
+            />Female
+          </label>
+          <strong class="error" id="genderErr"></strong>
+        </div>
+      </div>
+
+      <div class="row">
+        <label for="lang"> Languages(optional) </label>
+        <div class="form-inline">
+          <label>
+            <input type="checkbox" name="lang[]" value="kannada" />Kannada
+          </label>
+          <label>
+            <input type="checkbox" name="lang[]" value="english" />English
+          </label>
+          <label>
+            <input type="checkbox" name="lang[]" value="hindi" />Hindi
+          </label>
+          <label>
+            <input type="checkbox" name="lang[]" value="tamil" />Tamil
+          </label>
+          <label>
+            <input type="checkbox" name="lang[]" value="telugu" />Telugu
+          </label>
+        </div>
+        <strong class="error" id="langErr"></strong>
+      </div>
+
+        <div class="row">
+            <div class="btn-group">
+            <input type=" submit" value="Submit" class="btn-sub" />
+            <input type="reset" value="Reset" class="btn-rst" />
+            </div>
+        </div>
+    </form>
+
+    <script src="Assets/JS/validate.js"></script>
+  </body>
+</html>

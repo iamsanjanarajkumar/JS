@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expressions</title>
+</head>
+<body>
+    <h1> String Replace using Regular Expressions</h1>
+
+    <script>
+        let regex = /apples/g;
+        let regexIgnoreCase = /apples/gi;
+        let regexSingle = /apples/i;
+        let str = "Apples are round, and apples are juicy.";
+
+        console.log(`${str.replace(regex,"oranges")}`); /* global exact match */
+        console.log(`${str.replace(regexIgnoreCase,"oranges")}`); /* all matches */
+        console.log(`${str.replace(regexSingle,"oranges")}`); /* first match */
+
+    </script>
+    
+</body>
+</html>

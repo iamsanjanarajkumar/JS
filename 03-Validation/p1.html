@@ -37,7 +37,9 @@
           status.inertText = "Valid username";
           status.style.color = "green";
         }
-        
+        setTimeout(function () {
+          status.innerText = "";
+        }, 5000);
       }
     </script>
   </body>

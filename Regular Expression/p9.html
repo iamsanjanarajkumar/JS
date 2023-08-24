@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regular Expressions</title>
+  </head>
+  <body>
+    <h1>Email Validations with regular Expressions</h1>
+
+    <form autocomplete="off" method="post">
+      <div>
+        <label for="email">Email Id</label>
+        <input type="text" name="email" id="email" onkeyup="validateEmail()">
+        <span id="status"></span>
+      </div>
+      <div>
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+
+    <script>
+        function validateEmail() {
+            let email = document.getElementById("email").value;
+            let status = document.getElementById("status");
+
+            let re = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+
+            if(re.test(email)){
+                status.innerText ="Valid Email ID";
+                status.style.color ="green";
+            } else{
+                status.innerText ="Invalid Email ID";
+                status.style.color ="orangered";
+            }
+        }
+    </script>
+  </body>
+</html>

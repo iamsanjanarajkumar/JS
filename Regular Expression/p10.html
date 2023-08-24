@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expressions</title>
+</head>
+<body>
+    <h1>Indian Mobile Number validation with regular expression</h1>
+
+    <form autocomplete="off" >
+        <div >
+            <label for="mobile">Mobile</label>
+            <input type="text" name="mobile" id="mobile" onkeyup="validateMobile()">
+            <span id="status"></span>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+    <script>
+        function validateMobile() {
+            let mobile = document.getElementById("mobile").value;
+            let status = document.getElementById("status");
+
+            /*
+               +916360138054 / +91 6360138054
+               +91-6360138054
+               916360138054
+               06360138054
+               6360138054
+            */
+            let re = /^(\+91[\-\s]?)?[0]?(91)?[6-9]\d{9}$/;
+
+            if(re.test(mobile)){
+                status.innerText = "Valid Indian Mobile Number";
+                status.style.color ="green";
+            } else{
+                status.innerText = "Invalid Mobile Number";
+                status.style.color = "orangered";
+            }
+        }
+    </script>
+</body>
+</html>
