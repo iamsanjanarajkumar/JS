@@ -12,6 +12,7 @@
     <hr />
 
     <script>
+      // "use strict"
       var user = {
         email: "john@example.com",
       };
@@ -21,9 +22,10 @@
         writable: false, // true -> writable , false -> readable (write protect) (default)
       });
       console.log("before name =", user);
-      (user.name = "Mohan"),
-        (user.email = "mohan@gmail.com"),
-        console.log("after name =", user);
+
+          user.name = "Mohan",
+          user.email = "mohan@gmail.com",
+          console.log("after name =", user);
     </script>
   </body>
 </html>

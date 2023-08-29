@@ -21,6 +21,8 @@
       };
       console.log("Objects", user);
       console.log("entries =", Object.entries(user)); // array[key, value] -> entries
+
+      // for of loop  to iterate value of entries
       for (let [key, value] of Object.entries(user)) {
         console.log(`${key} = ${value}`);
         document.write(`<h3>${key} : ${value}</h3>`);

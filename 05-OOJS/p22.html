@@ -7,26 +7,28 @@
   </head>
   <body>
     <center>
-      <h1>constructor methods (ES-S)</h1>
+      <h1>constructor methods (ES-5)</h1>
     </center>
     <hr />
     <script>
       //constructor follows function and object
-      //name of constructor forst letter starts with uppercase
+      //name of constructor first letter starts with UPPERCASE
       //constructor properties create using 'this'
-      //creat an instance to constructor using 'new'
-      //constructor cant return
+      //create an instance to constructor using 'new'
+      //constructor can't return
 
-      function user(){
-          this.name = "Sonu";
-          this.email= "sonu@gmail";
+      function User(){
+          this.name = "Sanjana";
+          this.email= "sanjana@gmail.com";
           this.age ="22";
           let a=12;
 
       };
       //instance -> it is a variable we provide permission to access the properties of constructor
-      let x=new user();
+      let x=new User();
+
       console.log("constructor instance=",x);
+
       document.write(`<h1>name=${x.name}</h1>`);
       document.write(`<h1>name=${x.email}</h1>`);
       document.write(`<h1>name=${x.age}</h1>`);

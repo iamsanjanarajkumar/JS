@@ -13,6 +13,22 @@ let readAllTodo = async() =>{
     }).catch(err => console.error(err.message));
 
 }
+//delete handler
+const deleteTodo =async (id) =>{
+    if(window.confirm(`Are you sure you want to delete todo id ${id}?`)){
+        // console.log("Success"); 
+        await fetch(`${URL}/todos/${id}`,{
+            method: 'DELETE',
+            headers: {"Content-Type": "application/json"}
+        }).then(res => res.json())
+        .then(res =>{
+         window.alert("todo deleted successfully");
+         //window.location.reload();
+        }).catch(err => console.log(err.message));
+    }else{
+        console.log('Delete Terminated');
+    } 
+}
 
 //print data
 const printData = (todo) =>{
@@ -26,8 +42,8 @@ const printData = (todo) =>{
                   <p> Status = ${item.completed? `<strong class ="success">Completed</strong>`:`<strong class="danger">Not Completed</strong>`}</p>
                   </div>
                   <div class="card-footer">
-                  <a href="/12-PROJECTS/CRUD USING API/update.html?id=${item.id}" class ="btn btn-green">Update</a>
-                  <a class="btn btn-red">Delete</a>
+                  <a href="/12-PROJECTS/CRUD USING API/update.html?id=${item.id}&status=${item.completed}" class ="btn btn-green">Update</a>
+                  <a  onclick = "deleteTodo(${item.id})" class="btn btn-red">Delete</a>
                   </div>
                  </article>
         

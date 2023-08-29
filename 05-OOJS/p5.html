@@ -19,7 +19,7 @@
       };
       console.log(`user= `, user);
 
-      const user1 = Object.create(user);
+      const user1 = Object.create(user);//properties cannot be read as it is a  cloned object therefore we use the getPrototypeOf method 
       console.log(`user1= `, user1);
 
       let result = Object.getPrototypeOf(user1);
