@@ -8,6 +8,7 @@
   <body>
     <center>
       <h1>Super Key</h1>
+      <p> When two classes contain the same methods where overwriting takes place in order to avoid this we use super keyword  while calling the method in the base class </p>
     </center>
 
     <script>
@@ -28,7 +29,7 @@
           this.sand = c; //own prop of base class
         }
         getMaterialInfo() {
-            document.write(`<h1> ${super.getMaterialInfo()} </h1>`);
+            document.write(`<h1> ${super.getMaterialInfo()} </h1>`);//as the super class also contains getMaterialInfo() method while inheriting this into the base class we use super keyword 
             return `the sand info = ${this.sand} load.`;
         }
       }

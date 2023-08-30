@@ -1,51 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OOJS</title>
-</head>
-<body>
+  </head>
+  <body>
     <center>
-        <h1>PROTOTYPE</h1>
-        <p>prototype keyword -> is used  to create a property to an constructor externally</p>
+      <h1>PROTOTYPE</h1>
+      <p>
+        prototype keyword -> is used to create a property to an constructor
+        externally
+      </p>
     </center>
-    <hr>
+    <hr />
     <script>
-        function Student(){
-            //Local property
-            let name,gender;
+      function Student() {
+        //Local property
+        let name, gender;
 
-            //constructor property
-            this.name="ABCD";
-            this.gender="Male";
+        //constructor property
+        this.name = "ABCD";
+        this.gender = "Male";
+      }
+      let stud = new Student(); //Constructor object
+      document.write("<b>Stud.name:</b>" + stud.name + "<br><br>");
+      document.write("<b>Stud.gender:</b>" + stud.gender + "<br><br>");
+
+      stud.age = 20;
+      document.write("<b>Stud.age:</b>" + stud.age + "<br><br>");
+
+      let stud1 = new Student();
+      document.write("<b>Stud.name:</b>" + stud1.name + "<br><br>");
+      document.write("<b>Stud.gender:</b>" + stud1.gender + "<br><br>");
+      document.write("<b>Stud.gender:</b>" + stud1.age + "<br><br>");
+
+      Student.prototype.age1 = 30;
+      let Student1 = new Student();
+      document.write("<b>Student1.age1:</b>" + Student1.age1 + "<br><br>");
+
+      let Student2 = new Student();
+      document.write("<b>Student2.age1:</b>" + Student2.age1 + "<br><br>");
+    </script>
+
+    <script>
+      function User() {
+        this.name ="Sanjana";
+        this.getName = function() {
+            document.write(`<h3> My name is ${this.name}! </h3>`);
         }
-        let stud=new Student();//Constructor object
-        document.write("<b>Stud.name:</b>"+ stud.name+"<br><br>");
-        document.write("<b>Stud.gender:</b>"+ stud.gender+"<br><br>");
+        
+      }
+      //constructor.prototype.property = value;
+      User.prototype.email = "sanjana@gmail.com";
+      User.prototype.getEmail = function() {
+        document.write(`<h3> email is ${this.email}! </h3>`);
+      };
+       let x = new User();
 
-        stud.age=20;
-        document.write("<b>Stud.age:</b>"+ stud.age+"<br><br>");
+       console.log('User instance=', x);
 
-        let stud1=new Student();
-        document.write("<b>Stud.name:</b>"+ stud1.name+"<br><br>");
-        document.write("<b>Stud.gender:</b>"+ stud1.gender+"<br><br>");
-        document.write("<b>Stud.gender:</b>"+ stud1.age+"<br><br>");
-
-        Student.prototype.age1=30;
-        let Student1=new Student();
-        document.write("<b>Student1.age1:</b>"+ Student1.age1+"<br><br>");
-
-        let Student2=new Student();
-        document.write("<b>Student2.age1:</b>"+ Student2.age1+"<br><br>");
-
-
-
-
-
-
-
+       document.write(`<h3> name = ${x.name}! </h3>`);
+       document.write(`<h3> email = ${x.email}! </h3>`);
+        x.getName();
+        x.getEmail();
 
     </script>
-</body>
+  </body>
 </html>

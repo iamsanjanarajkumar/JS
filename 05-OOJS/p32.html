@@ -11,20 +11,21 @@
     </center><hr>
 
     <script>
-        class person{
+        class Person{
            //properties and method 
-           constructor(){
+           constructor(val){
             document.write('hi I am constructor');
-            this.name="Sanjana";
+            this.name= val;
            }
            static getName(na){
               //this pointer is inactive inside the static methods
-              document.write('<h1> hi '+this.name+' welcome to JS</h1>');
-              //document.write('<h1> '+na +' welcome to JS</h1>');
+              document.write(`<h1> hi ${this.name} welcome to JS</h1>`);
+              document.write('<h1> '+na +' welcome to JS</h1>');
 
            }
 
         }
+        var x =new Person("Sanjana");
         //classname.methodname
        Person.getName("Sanjana");
     </script>
