@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JS</title>
+    <style>
+        section{
+           width: 100%;
+           overflow-x: hidden;
+           display: grid;
+           grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+           grid-gap:10px;
+       }
+       article{
+           background-color: turquoise;
+           padding: 5px;
+           color: #eee;
+           border-radius: 14px;
+       }
+       article h2{
+           color: crimson;
+       }
+       article h6{
+           color: greenyellow;
+       }
+   </style>
+</head>
+<body>
+    <h2> User Info Cards</h2>
+
+    <section id="card"></section>
+
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then(res => res.json())
+        .then(res =>{
+            console.log('res',res);
+            print(res);
+        })
+        .catch(err => console.log(err.message));
+
+        let blk = document.querySelector('#card');
+
+        function print(data){
+            data.map(item  =>{
+                let article = document.createElement('article');
+                let name = document.createElement('h2');
+                let userName = document.createElement('h5');
+                let email = document.createElement('h6');
+                let address = document.createElement('div');
+                let city = document.createElement('p');
+                let zip = document.createElement('p');
+                // let geo = document.createElement('p');
+
+                name.textContent = item.name;
+                userName.textContent = item.username;
+                email.textContent = item.email;
+                address.textContent = item.address.street;
+                city.textContent = item.address.city;
+                zip.textContent = item.address.zipcode;
+
+                address.appendChild(city);
+                address.appendChild(zip);
+                
+                article.appendChild(name);
+                article.appendChild(userName);
+                article.appendChild(email);
+                article.appendChild(address);
+                
+
+                blk.appendChild(article);
+
+
+
+            });
+        }
+    </script>
+</body>
+</html>

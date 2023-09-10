@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ECMA-Script</title>
+  </head>
+  <body>
+    <h3>Deleting properties</h3>
+
+    <script>
+      var x = new Object();
+      x.name = "Tata Nexon";
+      x.model = 2021;
+      x.color = "red";
+
+      console.log("Before Delete x =", x);
+
+      //for(let ref in object)
+      for (let item in x) {
+        delete x[item];
+      }
+      //Object.setPrototypeOf(x , {}); //cloned Object
+
+      console.log("After Delete x =", x);
+    </script>
+  </body>
+</html>

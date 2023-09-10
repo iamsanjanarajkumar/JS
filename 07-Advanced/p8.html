@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced JS</title>
+  </head>
+  <body>
+    <h4>Products Info</h4>
+    <div class="table-container">
+      <table border="1" style="border-collapse: collapse;">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Thumb-nail</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Discount%</th>
+            <th>Rating</th>
+            <th>Brand</th>
+          </tr>
+        </thead>
+        <tbody id="products"></tbody>
+      </table>
+    </div>
+
+    <script>
+      fetch('https://dummyjson.com/products')
+        .then((res) => res.json())
+        .then((res) => {
+          console.log("res", res);
+          printData(res.products);
+        })
+        .catch((err) => console.log(err.message));
+
+      let userProducts = document.querySelector("#products");
+
+      function printData(data) {
+        data.map((item) => {
+          userProducts.innerHTML += `<tr>
+             <td> ${item.id}</td>
+             <td><img height='50' width='50' border-radius='100px' src =${item.thumbnail} ></td>
+             <td>${item.title}</td>
+             <td>${item.description}</td>
+             <td>${item.price}</td>
+             <td>${item.discountPercentage}</td>
+             <td>${item.rating}</td>
+             <td>${item.brand}</td>
+                    
+          </tr>`;
+        });
+      }
+    </script>
+  </body>
+</html>

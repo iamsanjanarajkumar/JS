@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA-Script</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h3>for...of loop</h3>
+
+    <script>
+        var colors = ['blue', 'green', 'yellow']; //array
+        //for (let ref of array)
+
+        for(let item of colors){
+            document.write(`<h2>${item} </h2>`);
+        }
+
+        //array.forEach(function(ref){
+        //     document.write(`<h2>${ref} </h2>`);
+        // });
+
+        var title = "be-practical";//string
+
+        for(let item of title){
+            document.write(`<p>${item} </p>`);
+        }
+    </script>
+</body>
+</html>

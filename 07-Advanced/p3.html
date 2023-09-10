@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced JS</title>
+  </head>
+  <body>
+    <h3>Function Hoisting</h3>
+
+    <script>
+      sayHi(); //function call
+
+      //definition
+      function sayHi() {
+        document.write(`<h1> Welcome to JavaScript function hoisting!</h1>`);
+      }
+      //expression
+    //   const sayHi = () => {
+    //     document.write(`<h1> Welcome to JavaScript function hoisting!</h1>`);
+    //   };
+
+      //uncaught ReferenceError: Cannot access 'sayHi' before Initialization
+    </script>
+  </body>
+</html>

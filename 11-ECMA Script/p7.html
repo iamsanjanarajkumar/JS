@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA-Script</title>
+</head>
+<body>
+    <h3>Rest Operators</h3> 
+    <script>
+        /*11,12,12,56,67,89,45 =sum */
+        /* accepts parameter return as an array  =>rest operator (...)*/
+
+        let sum = 0;
+        function sumOfDigits(...num){
+            console.log('num =' , num);//array
+
+            num.forEach(item =>{
+                sum += item;
+            })
+            document.write(`<h1> Sum of (12,12,45,23,24,28,57,45,78) =${sum} </h1>  `);
+        }
+        sumOfDigits(12,12,45,23,24,28,57,45,78);
+    </script>
+    
+</body>
+</html>

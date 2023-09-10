@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdvancedJS</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        overflow-x: hidden;
+      }
+      .container {
+        width: 80vw;
+        margin: auto;
+      }
+      .row {
+        display: flex;
+      }
+      table,
+      tr,
+      td,
+      th {
+        border: 1px solid #222;
+        border-collapse: collapse;
+        width: 100%;
+        table-layout: fixed;
+        margin: 10px;
+      }
+      tr,
+      td,
+      th {
+        padding: 10px;
+      }
+      tr:nth-child(even) {
+        background-color: #aaa;
+        color: #222;
+      }
+      button {
+        cursor: pointer;
+        padding: 10px, 12px;
+        font-size: 1em;
+        font-weight: bold;
+        border: none;
+      }
+      .btn-info {
+        background-color: slateblue;
+        color: #ffff;
+      }
+      .btn-danger {
+        background-color: orangered;
+        color: #ffff;
+      }
+      .btn-success {
+        background-color: green;
+        color: #ffff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <table>
+          <thead>
+            <tr>
+              <th colspan="5">
+                <button class="btn-info" id="open">Add user</button>
+              </th>
+            </tr>
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Age</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="userInfo"></tbody>
+        </table>
+      </div>
+
+      <dialog id="userDialog">
+        <button id="close" class="btn-danger">X</button>
+        <div class="form">
+          <form  autocomplete="off" onsubmit="submitHandler(event)">
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" required />
+            </div>
+            <div>
+              <label for="age">Age</label>
+              <input type="number" name="age" id="age" required />
+            </div>
+            <div>
+              <button type="submit" class="btn-success">Add New User</button>
+            </div>
+          </form>
+        </div>
+      </dialog>
+    </div>
+
+    <script>
+      let op = document.getElementById("open");
+      let cls = document.getElementById("close");
+      let dig = document.getElementById("userDialog");
+
+      op.addEventListener("click", (e) => {
+        dig.show();
+      });
+
+      cls.addEventListener("click", (e) => {
+        dig.close();
+      });
+
+      //form
+      let fname = document.getElementById("name");
+      let femail = document.getElementById("email");
+      let fage = document.getElementById("age");
+
+      //random number between 0-10000
+      const genRand = () => Math.floor(Math.random() * 10000);
+
+      const submitHandler = async (e) => {
+        e.preventDefault();
+        let newUser = {
+          id: genRand(),
+          name: fname.value,
+          email: femail.value,
+          age: fage.value,
+        };
+        console.log("new user:", newUser);
+      };
+    </script>
+  </body>
+</html>

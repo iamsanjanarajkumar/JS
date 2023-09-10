@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA-Script</title>
+</head>
+<body>
+    <h3>Spread (...) operator with Math constructor</h3>
+    <!--receive an array return as parameters-->
+
+    <script>
+
+        var num = [44,23,56,50,49,234,900];
+        console.log('num' , num);
+        console.log('parameters (Spread)',...num);
+
+        document.write(`<h3> Max = ${Math.max(num)} </h3>`); //NaN
+        document.write(`<h3> Max = ${Math.max[44,23,56,50,49,234,900]} </h3>`);//NaN
+
+        document.write(`<h3> Max = ${Math.max(...num)} </h3>`);
+        document.write(`<h3> Min = ${Math.min(44,23,56,50,49,234,900)} </h3>`);
+    </script>
+</body>
+</html>

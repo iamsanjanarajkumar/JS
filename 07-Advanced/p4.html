@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JS</title>
+</head>
+<body>
+    <h2>Generator Functions</h2>
+
+    <script>
+        function* users(){
+            yield "Raju";
+            yield "Sanjana";
+            yield" Rachel";
+            yield "Ross";
+            yield "Kris";
+        }
+
+        console.log('users', users());
+        for(let item of users()){
+            document.write(`<h3> ${item}</h3>`);
+        }
+
+    </script>
+</body>
+</html>

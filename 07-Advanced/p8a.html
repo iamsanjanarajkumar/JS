@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdvancedJS</title>
+  </head>
+  <body>
+    <div class="table-container">
+      <table border="1" style="border-collapse: collapse">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>User-Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Phone</th>
+            <th>Company Name</th>
+          </tr>
+        </thead>
+        <tbody id="userDetails"></tbody>
+      </table>
+    </div>
+
+    <script>
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then((res) => res.json())
+        .then((res) => {
+          console.log("res", res);
+         printUserInfo(res);
+        })
+        .catch((err) => console.log(err.message));
+
+      let info = document.querySelector("#userDetails");
+
+      function printUserInfo(userInfo) {
+        userInfo.map ((item) => {
+          info.innerHTML += `<tr>
+             <td> ${item.id}</td>
+             <td>${item.name}</td>
+             <td>${item.username}</td>
+             <td>${item.email}</td>
+             <td>${item.address.suite}</td>
+             <td>${item.address.city}</td>
+             <td>${item.phone}</td>
+             <td>${item.company.name}</td>
+                    
+          </tr>`;
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,8 +1,19 @@
-<html>
-    <head>
-        <title> HTML Syntax</title>
-    </head>
-    <body>
-        
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ECMA-Script</title>
+  </head>
+  <body>
+    <h3>let and const over var</h3>
+
+    <script>
+      if (10 < 40) {
+        const x = 120; //var -> global scope variable , let & const -> local scope/block scope variable
+        document.write(`<h1> Inside the block ${x}</h1>`);
+      }
+      document.write(`<h2> Outside the block ${x}</h2>`);
+    </script>
+  </body>
 </html>
